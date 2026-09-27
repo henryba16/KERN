@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+.vibecode-backup*/
+
+# harness logs - local-only, do not commit
+.vc-orphaned-dirs.log
+
+# harness: local-only, never push to GitHub (working locally, prod pushes only)
+/.claude/
+/.codex/
+/.agents/
+/process/
+.vc-installed-files
+.vc-version
