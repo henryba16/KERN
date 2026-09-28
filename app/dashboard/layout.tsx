@@ -1,4 +1,5 @@
 import styles from "./dashboard.module.css";
+import Link from "next/link";
 
 export default function DashboardLayout({
     children,
@@ -8,26 +9,26 @@ export default function DashboardLayout({
     return (
         <div className={styles.layout}>
 
-            <aside className={styles.sidebar}>
-                <h1>KERN</h1>
-
-                <nav>
-                    <a href="/dashboard">Dashboard</a>
-                    <a href="/dashboard/profile">Profile</a>
-                    <a href="/dashboard/team">Team</a>
-                    <a href="/dashboard/verify">Verify CF</a>
-                </nav>
-            </aside>
-
-            <div className={styles.mainArea}>
-
-                <header className={styles.header}>
+            <header className={styles.header}>
+                <Link href="/">
                     <span>KERN TERMINAL</span>
+                </Link>
 
-                    <button>
-                        User
-                    </button>
-                </header>
+                <button>
+                    User
+                </button>
+            </header>
+
+            <div className={styles.body}>
+
+                <aside className={styles.sidebar}>
+                    <nav>
+                        <Link href="/dashboard">Dashboard</Link>
+                        <Link href="/dashboard/profile">Profile</Link>
+                        <Link href="/dashboard/team">Team</Link>
+                        <Link href="/dashboard/verify">Verify CF</Link>
+                    </nav>
+                </aside>
 
                 <main className={styles.content}>
                     {children}
