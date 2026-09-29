@@ -24,7 +24,6 @@ export default function DashboardLayout({
                 <aside className={styles.sidebar}>
                     <nav>
                         <Link href="/dashboard">Dashboard</Link>
-                        <Link href="/dashboard/profile">Profile</Link>
                         <Link href="/dashboard/team">Team</Link>
                         <Link href="/dashboard/verify">Verify CF</Link>
                     </nav>
